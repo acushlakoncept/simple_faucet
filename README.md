@@ -6,6 +6,7 @@ Playing with Etherium Smart Contracts
 - Migrate Contracts
 ```
 truffle migrate
+truffle migrate --reset  //force recompilation
 ```
 
 - Compile Contract
@@ -21,3 +22,15 @@ Ganache is a private simulation of a blockchain to test and simulate your smart 
 ganache-cli
 ```
 
+> web3.js is a collection of libs that allow you to interact with a local or remote ethereum node.
+
+
+### Some truffle console commands for test
+> const instance = await Faucet.deployed()
+> instance.addFunds({value: 2000000000000000000, from: accounts[0]})
+> instance.addFunds({value: 2000000000000000000, from: accounts[1]})
+
+> instance.withdraw('500000000000000000', {from: accounts[1]})
+
+> instance.getFunderAtIndex(0)
+> instance.getAllFunders()
